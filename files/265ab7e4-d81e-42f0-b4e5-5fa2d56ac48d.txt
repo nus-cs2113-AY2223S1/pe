@@ -1,0 +1,132 @@
+ ____        _
+|  _ \ _   _| | _____
+| | | | | | | |/ / _ \
+| |_| | |_| |   <  __/
+|____/ \__,_|_|\_\___|
+
+I am the nurse helper!
+pet view
+____________________________________________________________
+Here are the pets in your pet list:
+____________________________________________________________
+employee add n/chris
+____________________________________________________________
+Got it. I've added this employee: chris
+Now you have 1 employees in the list.
+____________________________________________________________
+employee view
+____________________________________________________________
+Here are the employees in your employee list:
+1. ID:1001       name:chris
+____________________________________________________________
+ appointment add s/haircut p/2001 d/2022-12-29
+____________________________________________________________
+Sorry, no corresponding service found to add the appointment.
+Add appointment failed.
+____________________________________________________________
+service add d/haircut
+____________________________________________________________
+Got it. I've added this service:
+haircut
+Now you have 1 services in the service list.
+____________________________________________________________
+ appointment add s/haircut p/2001 d/2022-12-29
+____________________________________________________________
+Sorry, no corresponding pet found to add the appointment.
+Add appointment failed.
+____________________________________________________________
+pet view
+____________________________________________________________
+Here are the pets in your pet list:
+____________________________________________________________
+pet add n/Eliza s/cat h/0
+____________________________________________________________
+Pet has been registered: name: Eliza, species: cat
+____________________________________________________________
+ appointment add s/haircut p/2001 d/2022-12-29
+____________________________________________________________
+Got it. I've added this appointment: Pet Eliza(2001)    Service haircut
+Now you have 1 appointments in the list.
+____________________________________________________________
+pet view
+____________________________________________________________
+Here are the pets in your pet list:
+1.      ID:2001  I am a cute cat, my name is Eliza, and I am currently unhealthy and painful
+____________________________________________________________
+task add i/3001 e/1001 d/prepare hot water
+____________________________________________________________
+Got it. I've added this task: prepare hot water
+Performed by: chris
+Appointment: ID 3001
+Now you have 1 task in the list.
+____________________________________________________________
+employee view
+____________________________________________________________
+Here are the employees in your employee list:
+1. ID:1001       name:chris
+____________________________________________________________
+task view
+____________________________________________________________
+Here are all the tasks for the clinic:
+____________________________________________________________
+Task ID:4001
+Description: prepare hot water
+Employee: chris
+Appointment ID: 3001
+Service: haircut
+Date: 2022-12-29
+Status: Not Done
+____________________________________________________________
+employee remove i/1001
+____________________________________________________________
+Noted. I've removed this employee: chris
+Now you have 0 employees in the list.
+____________________________________________________________
+task view
+____________________________________________________________
+Here are all the tasks for the clinic:
+____________________________________________________________
+Task ID:4001
+Description: prepare hot water
+Appointment ID: 3001
+Service: haircut
+Date: 2022-12-29
+Status: Not Done
+____________________________________________________________
+employee view
+____________________________________________________________
+Here are the employees in your employee list:
+____________________________________________________________
+employee add n/john
+____________________________________________________________
+Got it. I've added this employee: john
+Now you have 1 employees in the list.
+____________________________________________________________
+employee view
+____________________________________________________________
+Here are the employees in your employee list:
+1. ID:1002       name:john
+____________________________________________________________
+pet view
+____________________________________________________________
+Here are the pets in your pet list:
+1.      ID:2001  I am a cute cat, my name is Eliza, and I am currently unhealthy and painful
+____________________________________________________________
+appointment view
+____________________________________________________________
+Here are the appointments in your list:
+1. ID:3001      PetID:2001      Service:haircut Date:2022-12-29 Status:PROCESSING
+____________________________________________________________
+pet remove i/2001
+____________________________________________________________
+Noted. I've removed this pet:
+Eliza
+Now you have 0 pets in the pet list.
+____________________________________________________________
+____________________________________________________________
+Exception in thread "main" java.lang.NullPointerException
+        at task.TaskList.removeTask(TaskList.java:117)
+        at command.appointmentcommand.RemoveAppointmentCommand.execute(RemoveAppointmentCommand.java:23)
+        at command.petcommand.RemovePetCommand.execute(RemovePetCommand.java:44)
+        at seedu.duke.Duke.run(Duke.java:29)
+        at seedu.duke.Duke.main(Duke.java:43)
